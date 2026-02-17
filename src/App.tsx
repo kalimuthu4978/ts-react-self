@@ -3,9 +3,8 @@
 // 1. function component
 // 2. class component
 
-
 function App() {
-  return <h1> Hello World </h1>
+  return <h1> Hello World! </h1>
 }
 export default App;
 
