@@ -1,13 +1,12 @@
 import Header from "./components/Header";
 
 const App = () => {
-  // define the data nd js fucntions before return
-/*   let name  = "Jeevitha"
-  let age = 25 */
-  let message = "Hi, How are you?"
+  const getDataFromChild =(message : string) : void => {
+    console.log("Child: ", message);
+  }
   return (
     <> 
-        <Header message = {message}/>
+        <Header getDataFromChild = {getDataFromChild}/>
     </>
   )
 }
