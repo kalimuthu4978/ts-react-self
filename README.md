@@ -11,6 +11,9 @@ Virtual DOM is a lightweight copy of the actual DOM. It allows React to update o
 - It uses a component-based architecture
 Components are reusable pieces of code that can be used to build complex user interfaces. They can be nested, managed, and handled independently.
 - It uses JSX syntax
-JSX is a syntax extension for JavaScript that allows you to write HTML-like code in your JavaScript files. It makes it easier to create and visualize the structure of your components.
+    JSX is a syntax extension for JavaScript that allows you to write HTML-like code in your JavaScript files. It makes it easier to create and visualize the structure of your components.
+    JSX is optional, you can also use plain JavaScript to create components and manage the DOM. It is JavaScript HTML
+    - JavaScript XML - Javascript + HTML
+    - Typescript XML - Typescript + HTML
 - It has a unidirectional data flow
-In React, data flows in one direction, from parent components to child components. This makes it easier to understand how data is being passed and helps to prevent bugs
+In React, data flows in one direction, from parent components to child components. This makes it easier to understand how data is being passed and helps to prevent bugs.
