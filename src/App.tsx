@@ -1,13 +1,14 @@
-import Header from "./components/Header";
-
+import ParentComponent from "./components/ParentComponent"
+type Props = {
+  name :string
+}
 const App = () => {
-  const getDataFromChild =(message : string) : void => {
-    console.log("Child: ", message);
-  }
+  const name :string = "Kali";
   return (
-    <> 
-        <Header getDataFromChild = {getDataFromChild}/>
+    <>
+      <ParentComponent name = {name}/>
     </>
   )
 }
-export default App;
+
+export default App

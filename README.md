@@ -17,3 +17,15 @@ Components are reusable pieces of code that can be used to build complex user in
     - Typescript XML - Typescript + HTML
 - It has a unidirectional data flow
 In React, data flows in one direction, from parent components to child components. This makes it easier to understand how data is being passed and helps to prevent bugs.
+
+
+## PRops Drilling
+- It is a technique for passing data from a parent component to a child component through props.
+- It can be a problem when you have a large component tree and you need to pass data through multiple levels of components. This can lead to a lot of boilerplate code and make it difficult to maintain the codebase.
+- To solve this problem, you can use state management libraries like Redux or Context API to manage the state of your application and avoid prop drilling. These libraries allow you to store the state in a
+
+-APP
+    - Parent Component
+        - Child Component 1
+            - Child Component 2
+                - Child Component 3
