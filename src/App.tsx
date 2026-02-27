@@ -1,18 +1,13 @@
-import Header from "./components/Header"
-
-type Props = {
-  name : string,
-  age : number
-}
-
+import Header from "./components/Header";
 
 const App = () => {
   // define the data nd js fucntions before return
-  let name  = "Jeevitha"
-  let age = 25
+/*   let name  = "Jeevitha"
+  let age = 25 */
+  let message = "Hi, How are you?"
   return (
     <> 
-        <Header name = {name} age = {age}/>
+        <Header message = {message}/>
     </>
   )
 }
