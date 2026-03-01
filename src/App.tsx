@@ -1,34 +1,19 @@
-import { useState } from "react";
+import { useState } from "react"
 
 const App = () => {
 
-  const [count, setCount] = useState(1);
-
-
-  const likeClick =() => {
-    if (count< 10) {
-     setCount(count + 1);
-    }
-
-  }
-
-    const dislikeClick =() => {
-      if (count >1) {
-            setCount(count - 1);
-      }
-  }
-
+  const [likes, setLikes] = useState<number>(0);
+  const [dislikes, setDislikes] = useState<number> (0);
 
   return (
-    <>
-     
-      <button onClick={likeClick}> + </button>
-      &nbsp;&nbsp;   <span><strong>{count}</strong></span>  &nbsp;&nbsp; 
-
-      <button onClick={dislikeClick}> - </button>
-
-      &nbsp;&nbsp;
-      <button onClick={() => setCount(1)}> reset </button>
+    <> 
+      <div> 
+        <button onClick = {() => {setLikes(likes +1)}}> Like </button> &nbsp; { likes} &nbsp;
+        <button onClick = {() => { setDislikes(dislikes +1)}}> Dislike </button> &nbsp; { dislikes} &nbsp;
+      </div> 
+      <div>
+        <button onClick = {() => {setLikes(0), setDislikes(0)}}> Reset </button>
+      </div>
     </>
   )
 }
