@@ -29,3 +29,13 @@ In React, data flows in one direction, from parent components to child component
         - Child Component 1
             - Child Component 2
                 - Child Component 3
+
+### useState Hook
+- Reacr Component can be either a class component or a functional component.
+
+### Spread and rest operator
+- The spread operator is used to expand an array or object into individual elements. It is denoted by three dots (...). For example, if you have an array of numbers, you can use
+- the ... is given at the start of the array or object to expand it, and at the end of the array or object to collect the remaining elements.
+
+
+- The Rest operator is used to collect the remaining elements of an array or object into a new array or object. It is also denoted by three dots (...). For example, if you have an array of numbers and you want to collect all the numbers except the first one, you can use the rest operator.
