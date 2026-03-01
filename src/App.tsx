@@ -3,39 +3,40 @@ import { useState } from "react";
 const App = () => {
 
   /*
-    history = record the increase and decrease click as array along with reset log
+    Complex State: use single state for both count and history
+    state = {
+              count : 6 ;
+              history : ['I', 'D', 'R']
+            }
   */
 
-  let  [count, setCount] = useState(1);
-  let  [history, setHistory] = useState([]);
-
+  let [state, setState] = useState({
+    count: 1,
+    history: []
+  });
 
   const likeClick =() => {
-    if (count< 10) {
-     setCount(count + 1);
-     setHistory([...history, 'I']);
+    if (state.count< 10) {
+      setState({count: state.count +1, history: [...state.history, 'I']});
     }
-
   }
 
     const dislikeClick =() => {
-      if (count >1) {
-            setCount(count - 1);
-            setHistory([...history, 'D']);
+      if (state.count >1) {
+        setState({count: state.count -1, history: [...state.history, 'D']});
       }
   }
 
-  console.log(history)
+  console.log(state.history)
   return (
     <>
      
-      <button onClick={likeClick}> + </button>
-      &nbsp;&nbsp;   <span><strong>{count}</strong></span>  &nbsp;&nbsp; 
-
       <button onClick={dislikeClick}> - </button>
+      &nbsp;&nbsp;   <span><strong>{state.count}</strong></span>  &nbsp;&nbsp; 
+      <button onClick={likeClick}> + </button>
 
       &nbsp;&nbsp;
-      <button onClick={() => {setCount(1); setHistory([...history,'R'])}}> reset </button>
+      <button onClick={() => {setState({count: 1, history: [...state.history,'R']})}}> reset </button>
     </>
   )
 }
